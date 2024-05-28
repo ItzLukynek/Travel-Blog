@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;800&display=swap');
+
+:root{
+    --grey:#404040;
+    --red:rgb(196, 3, 3);;
+    --lighterred: rgba(255, 7, 7, 0.793);
+    --orange:rgb(232, 138, 7);
+    --darkred:rgb(188, 0, 0);
+}
+.bg_pic{
+  background-image: url("../public/images/designImages/family.jpg");
+}
+#scrollernav{
+  background-color: var(--red);
+    
+}
+main{
+  
+  background-color: #f9f9f9;
+}
+
+footer{
+  background-color: var(--red);
+}
+.latest_blog {
+    padding: 30px;
+    background-color: #f9f9f9;
+    /* Add any additional styles you want for the section */
+}
+.black_map{
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.737);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title_header{
+  padding: 100px 10px 50px 10px;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  font-weight: bold;
+  }
+
+.blog_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog_card {
+    cursor: pointer;
+    
+  width: 300px;
+    margin: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add any additional styles you want for the blog card */
+}
+
+.date_box {
+    display: inline-block;
+    position: absolute;
+    background-color: var(--red);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 50px;
+    transition: 0.5s;
+    transform: translateX(-20px) translateY(50px);
+    /* Add any additional styles you want for the date box */
+}
+
+
+.blog_card:hover div .date_box{
+  border: 1px var(--red) solid;
+  color: var(--red);
+  background-color: white;
+  
+  font-weight: 600;
+  transition: 0.6s ease;
+  
+  
+}
+.blog_card button {
+  --border: 5px;    /* the border width */
+  --slant: 0.7em;   /* control the slanted corners */
+  --color: var(--red); /* the color */
+  
+  font-size: 18px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--color);
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.blog_card button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.blog_card button:hover,
+.blog_card button:active{
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+.blog_card button:active {
+  --s: #0005;
+  transition: none;
+}
+
+
+.date_box span {
+    display: block;
+    font-size: 12px;
+}
+
+.blog_image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+.img_box{
+  width: 100%;
+  height: 200px;
+}
+.blog_title {
+    font-size: calc(1.3em + 0.3vw);
+    margin-bottom: 10px;
+    /* Add any additional styles you want for the blog title */
+}
+.blog_body{
+  padding: 20px;
+  height: 53%;
+}
+
+.blog_text {
+    font-size: 14px;
+    /* Add any additional styles you want for the blog text */
+}
+
+.photogallery img{
+  border-radius: 12px;
+  cursor: pointer;
+}
+* { box-sizing: border-box; }
+ul { list-style: none; margin: 0; padding: 0;}
+figure { margin: 0; ;}
+figcaption { font-style: italic; font-size: 0.8em; color: grey; line-height: 1.4; }
+
+
+
+.bg_car{
+    background-image: url("../public/images/designImages/car.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+
+
+.under_wrapper_bg_car{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+}
+#car_text2{
+    position: absolute;
+    left: 60%;
+    top: 60%;
+}
+@media(max-width:993px){
+  #car_text2{
+    position: absolute;
+    left: 40%;
+    top: 60%;
+}
+#car_text1{
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  
+}
+}
+#car_text1{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    
+}
+
+.under_wrapper_bg_car h1{
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+@media(max-width:660px){
+  .socialmain{
+    display: none;
+  }
+}
+
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#active:checked ~ .wrapper ul li a{
+  opacity: 1;
+}
+.wrapper ul li a{
+  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(100px);
+}
+#active:checked ~ .wrapper ul li a{
+	transform: none;
+	transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
+   transition-delay: .6s;
+  transform: translateX(-100px);
+}
+.wrapper a{
+  text-decoration: none !important;
+    color: white;
+    font-size: 2.8em;
+    font-weight: 700;
+    transition: 0.9s;
+    padding: 10px 20px;
+}
+.wrapper a:hover{
+  text-decoration: none !important;
+    font-size: 2.9;
+    font-weight: 800;
+    color: var(--red);
+}
+
+.active_country{
+  fill: var(--red) !important;
+  cursor: pointer;
+}
+.active_country:hover{
+  fill: var(--orange) !important;
+
+}
+
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.menu-btn span,
+  .menu-btn:before,
+  .menu-btn:after{
+      
+      border-bottom: 4px solid #000;
+       }
+
+  .ag-canvas {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    visibility: visible;
+    
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 5%;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  .ag-canvas_svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-left: 1rem;
+  }
+  .ag-canvas_svg path {
+    fill: rgb(255, 255, 255);
+    fill-opacity: 1;
+    stroke: #21252b;
+    stroke-opacity: 1;
+    stroke-width: 1.2;
+    transition: 1s;
+    opacity: 0;
+  }
+  .ag-canvas_svg path.show{
+    opacity: 1;
+    transition: 1s;
+  }
+ 
+
+  .map{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../public/images/designImages/worldmap.jpg");
+  }
+  .social ul li a {
+    color: var(--grey) ;
+  }
+
+  ul li a span:nth-child(1),
+  ul li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:var(--grey);
+  }
+  ul li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+  }
+  ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+  }
+  ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(2),
+  ul li a span:nth-child(4){
+    width:3px;
+    height:100%;
+    background:var(--grey) ;
+  }
+  .navbar ul li a {
+    color: white!important;
+    font-size: 1.4em !important;
+    font-weight: 700 !important;
+    transition: 0.9s !important;
+}
+  
+  @media screen and (max-width: 1200px) {
+    .title_header2{
+      display: none;
+    }
+    .map {
+      display: none;
+    }
+    .ag-canvas {
+      display: none;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      height: auto;
+      padding: 4rem 1rem 1rem;
+    }
+    .ag-canvas_svg {
+      max-height: calc(100% - 6rem);
+      margin-left: 0;
+    }
+  }
+ 
+  .map{
+    margin-top: calc(50px );
+  }
+
+
+  .about{
+    background-image: url("../public/images/designImages/truck_more.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 55vh;
+  }
+.under_about{
+  margin-top: 50px;
+}
+
+  .about_button button {
+    --border: 5px;    /* the border width */
+    --slant: 0.7em;   /* control the slanted corners */
+    --color: white; /* the color */
+    
+    font-size: 18px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color);
+    background: 
+       linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+       linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+      0 0 0 200px inset var(--s,#0000),
+      0 0 0 var(--border) inset var(--color);
+    
+    transition: color var(--t,0.3s), background-size 0.9s;
+  }
+  .about_button button:focus-visible {
+    outline-offset: calc(-1*var(--border));
+    outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+  }
+  .black_map .h1{
+    margin-bottom: 0px !important;
+  }
+  .about_button button:hover,
+  .about_button button:active{
+    background-size: 100% 100%;
+    color: black;
+    font-weight: 800;
+    font-size: 30px;
+    --t: 0.2s 0.1s;
+
+  }
+  .about_button button:active {
+    --s: #0005;
+    transition: none;
+  }
+  .about_title{
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+  }
+  @media(max-width:993px){
+    .about_title{
+      font-size: 30px;
+    }
+    .about_button h1{
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .about_button button{
+      width: 250px;
+    }
+  }
+  
+  .about_content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.under_about{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip {
+  display: none;
+  position: fixed;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1080; 
+}
+
+.red_styled_btn {
+  --border: 5px;    /* the border width */
+  --slant: 0.7em;   /* control the slanted corners */
+  --color: var(--red); /* the color */
+  transform: scale(1.4);
+  font-size: 18px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--color);
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.red_styled_btn.mrbg{
+  transform: scale(1.8);
+}
+.red_styled_btn:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.red_styled_btn:hover,
+.red_styled_btn:active{
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+.red_styled_btn:active {
+  --s: #0005;
+  transition: none;
+}
+.after_section{
+  max-width: 800px;
+}
+
+.after_section p{
+  
+  font-weight: 300;
+  font-size: calc(22px + 0.6vw) !important;
+  margin-bottom: 0px !important;
+}
+
+
+
+.titles{
+  margin-bottom:100px;
+  
+}
+.gallery_undertitle{
+  padding: 50px 10% 220px;
+}
+
+
+#tooltip {
+  background-color: #000000ab;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: calc(25px + 0.6vw);
+  font-weight: 800;
+  display: none;
+  position: absolute;
+  border-radius: 50px;
+  border: #fff 3px solid;
+  z-index: 9999;
+  transform: translateY(-150px) translateX(-50%);
+}
