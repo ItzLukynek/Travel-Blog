@@ -1,0 +1,30 @@
+
+.img-add-button {
+    top: 5px;
+    right: 5px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(73, 70, 70);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    
+  }
+  .img-add-button:hover {
+    background-color: rgb(48, 48, 48);
+  
+  }
+  
+  .img-add-icon::before {
+    content: "+";
+  }
+
+  .image.add_one{
+    border-radius: 12px ;
+    background-color: rgba(0, 0, 0, 0.158);
+    width: 220px;
+    height: 160px;
+    margin-top: 7.5px;
+    
+  }

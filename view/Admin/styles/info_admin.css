@@ -1,0 +1,46 @@
+.icard {
+    background-color: #3498db;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+}
+
+.icard-header h2 {
+    font-size: 23px;
+}
+.icard-content h2 {
+    font-size: 40px;
+}
+
+.icard-header {
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.icard-content {
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+
+.card-user {
+    background-color: #dc3545 !important; /* Use !important if necessary */
+}
+
+.card-comments {
+    background-color: #28a745 !important; /* Use !important if necessary */
+}
+
+.card-likes {
+    background-color: #e89b02 !important; /* Use !important if necessary */
+}
+
+.buttons .icard{
+    background-color: #202933 !important;
+}
+a{
+    text-decoration: none   !important;
+}
+
+a:hover{
+    text-decoration: none   !important;
+}

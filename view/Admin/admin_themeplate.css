@@ -1,0 +1,459 @@
+:root{
+    --lightblue:#1e88f3;
+    --header:#202933;
+    --lighterblue:#458cd4;
+}
+
+@-webkit-keyframes bgAnimat {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+@-moz-keyframes bgAnimat {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+@keyframes bgAnimat {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+
+
+
+body {
+    margin: 0;
+    background-color: var(--lighterblue)!important;
+   
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(175, 175, 175) !important; /* Set the background color to red */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  /* Optional: When the user hovers over the scrollbar */
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(155, 120, 120) !important; /* Darker shade of red on hover */
+  }
+
+/* Basic layout for the admin panel */
+.admin-panel {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+
+.header {
+    width: 100%;
+    position: absolute;
+    transition: 0.6s;
+    display: none ;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: var(--header);
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: relative;
+    left: 250;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width:996px){
+    .header{
+        display: flex;
+        transition: 1s;
+
+    }
+    
+    .menu{
+       align-items: center !important;
+    }
+    
+    .sidebar{
+        display: none;
+        position: absolute;
+    }
+    
+    .flex{
+        display: flex;
+    }
+    .sidebar.active {
+        left: 0;
+        display: flex;
+        width: 100%;
+    }
+    #slide {
+        animation-delay: 0.2s;
+    }
+    
+    
+    
+    
+}
+.flex{
+    display: none;
+}
+
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 2px 20px;
+    
+}
+.menu li a{
+    border-radius: 12px;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.user-role {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.user-name {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+
+.menu a {
+    
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    background-color: var(--lightblue);
+    text-decoration: none;
+    color: black !important;
+    font-weight: bold;
+}
+.menu a.active{
+    background-color: var(--lightblue);
+    text-decoration: none;
+   
+    font-weight: bold;
+}
+
+.menu i {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+.closener{
+    
+    justify-content: end;
+    position: relative;
+    width: 100%;
+}
+.close_button{
+    cursor: pointer;
+    position: absolute;
+    
+    top:25px;
+    margin-right: 25px;
+}
+.close_button i {
+    font-size: 35px;
+}
+
+
+/* Content area styling */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll!important ;
+    
+
+}
+
+
+#slide {
+    left: -100%;
+    -webkit-animation: slide 2s forwards;
+    animation: slide 2s forwards;
+    animation-delay: -0.5s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0px; }
+}
+
+@keyframes slide {
+    100% { left: 0px; }
+}
+
+
+
+.ecard {
+    
+    
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ecard-header {
+    
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.ecard-body {
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    overflow-y: hidden;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    
+}
+textarea{
+    height: auto;
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #2980b9;
+}
+
+#selectCountry{
+    min-width: 120px !important;
+}
+
+.content::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  /* Styling the scrollbar thumb */
+  .content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+  }
+
+  /* Styling the scrollbar track when hovered */
+  .content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+  }
+
+  /* Styling the scrollbar track */
+  .content::-webkit-scrollbar-track {
+    background-color: #cacaca; /* Color of the track */
+    border-radius: 6px; /* Rounded corners for the track */
+  }
+
+  /* Styling the scrollbar track when scrollbar is pressed */
+  .content::-webkit-scrollbar-thumb:active {
+    background-color: #444; /* Color of the thumb when pressed */
+  }
+  
+
+  /* Concept Modal */
+.concept-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.concept-modal .row{
+    margin: 0px 0px !important;
+}
+
+#concept-modal-content {
+    position:relative;
+    top: 0;
+    left: 0;
+    
+    padding: 10px 100px 10px 350px;
+    
+}
+.concept-modal h1{
+    margin-left: 250px;
+    color: white
+}
+
+
+/* Concept Item */
+.concept-item {
+    min-width: 250px !important;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+   background-color: #ebebeb;
+   margin-bottom: 15px;
+   min-height: 100px;
+   max-height:100px;
+   border: 2px solid #3498db;
+   box-shadow: 0 2px 5px #3498db;
+    
+}
+
+.concept-item:hover {
+    background-color: #ffffff;
+    
+}
+.concept-item:hover  h3{
+    font-weight: 700 !important;
+
+    
+}
+.concept-item:hover  h4{
+    font-weight: 500 !important;
+ 
+    
+}
+.concept-item:hover p{
+    font-weight: 600 !important;
+ 
+    
+}
+
+.concept-item  h3{
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    font-weight: 500 !important;
+    font-size: 20px;
+    
+}
+.concept-item h4{
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    font-weight: 500 !important;
+    font-size: 20px;
+    
+}
+.concept-item p{
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    font-weight: 300 !important;
+    font-size: 17px;
+    
+}
+.concept-desc {
+    font-weight: bold;
+}
+
+.concept-text {
+    margin-top: 5px;
+}
+
+/* Close Button */
+.concept-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media(max-width:996px){
+    #concept-modal-content {
+        overflow-y: hidden;
+        padding: 10px 20px;
+        
+    }
+    .concept-modal h1{
+        margin-left: 0px;
+        color: white
+    }
+    .content{
+        margin-top: 120px;
+    }
+}
+
+.concept-modal::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  /* Styling the scrollbar thumb */
+  .concept-modal::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+  }
+
+  /* Styling the scrollbar track when hovered */
+  .concept-modal::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+  }
+
+  /* Styling the scrollbar track */
+  .concept-modal::-webkit-scrollbar-track {
+    background-color: #cacaca; /* Color of the track */
+    border-radius: 6px; /* Rounded corners for the track */
+  }
+
+  /* Styling the scrollbar track when scrollbar is pressed */
+  .concept-modal::-webkit-scrollbar-thumb:active {
+    background-color: #444; /* Color of the thumb when pressed */
+  }
+  
